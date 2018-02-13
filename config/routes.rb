@@ -16,4 +16,9 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
+
+  get 'tasci_merger', to: 'tools#tasci_merger', as: :tasci_merger
+  post 'tasci_merger', to: 'tools#tasci_merger', as: :merge_tasci
+  
+
 end
